@@ -3,7 +3,7 @@ using namespace std;
 
 int partition(int* arr, int low, int high){
     int i = low;
-    int j= high;
+    int j = high;
     int pivot = arr[low];
     while(i<j){
         while(i<=high-1 and arr[i]<=pivot){
@@ -34,9 +34,9 @@ void quickSort(int *arr, int low, int high){
 
 int main()
 {
-    int arr[100] = {10,90,80,70};
+    int arr[100] = {10,90,80,70, 89};
     int start = 0;
-    int n = 4;
+    int n = 5;
 
     quickSort(arr, start, n-1);
     for(int i = 0; i<n; i++){
