@@ -60,10 +60,18 @@ class Heap{
         cout << "Heap is empty. Cannot delete.";
         return;
     }
-    
-    arr[1] = arr[size];
+    cout<<"Enter the number you want to delete: ";
+    int num;
+    cin>>num;
+    int index;
+    for(int i = 0 ;i<size; i++){
+        if(arr[i] == num){
+            index = i;
+        }
+    }
+    arr[index] = arr[size];
     size = size - 1;
-    heapify(arr, size, 1);
+    heapify(arr, size, index);
 }
 
 void heapSort() {
