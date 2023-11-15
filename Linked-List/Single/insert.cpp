@@ -11,9 +11,9 @@ struct link{
 struct link* start = NULL;
 struct link* node;
 struct link* current;
+// Main linked list::           start(78)->(6)->(5)->current(7)->NULL;
 
-
-void insertAtHead(int data){
+void insertAtHead(int data){//6->NULL
     // int n;
     // cin>>n;
     // for(int i =0; i<n; i++){
@@ -49,17 +49,22 @@ void insertAtTail(int data){
 
 void insertAtLoc(int data, int pos){
     // int location;
+    if(pos ==1){
+        insertAtHead(data);
+    }
+    else{
     link* ptr = start;
-    current = ptr->next;
+    link* ptrkaNext = ptr->next;
     node = new link;
     node->data = data;
     for(int i =0; i<pos-2; i++){
         ptr = ptr->next;
-        current = current->next;
+        ptrkaNext =ptrkaNext->next;
     }
     ptr->next = node;
-    node->next = current;
+    node->next = ptrkaNext;
     
+}
 }
 
 
@@ -77,9 +82,13 @@ int main()
 
     insertAtHead(5);
     insertAtHead(6);
+    insertAtHead(78);
     
     insertAtTail(7);
-    insertAtLoc(8,2);
+    print();
+    cout<<endl;
+    insertAtLoc(8,5);
+    insertAtLoc(9,6);
     print();
      
     return 0;

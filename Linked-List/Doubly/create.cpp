@@ -77,6 +77,15 @@ void print(){
         temp = temp->next;
     }
 }
+void present(int data){
+    link* temp = start;
+    while(temp!=NULL){
+        if(temp->data % 2 == 0){
+            cout<<temp->data<<" ";
+        }
+        temp = temp->next;
+    }
+}
 
 
 
@@ -89,6 +98,8 @@ int main()
     insertAtTail(6);
     insertAtPosition(98,3);
     print();
+    cout<<endl;
+    present(5);
      
     return 0;
 }
