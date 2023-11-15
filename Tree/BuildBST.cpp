@@ -46,7 +46,7 @@ void Inorder(Node* root){
     }
 
     Inorder(root->left);
-    cout<<char(root->data)<<" ";
+    cout<<(root->data)<<" ";
     Inorder(root->right);
 }
 
@@ -55,13 +55,12 @@ int main()
 {
     Node* root= NULL;
 
-    root = insert(root, 'A');
-    insert(root, 'B');
-    insert(root, 'Z');
-    insert(root, 'R');
-    insert(root, 'H');
-    insert(root, 'O');
-
+    root = insert(root, 9);
+    insert(root, 8);
+    insert(root, 3);
+    insert(root, 4);
+    insert(root, 5);
+    insert(root, 6);
 
     Inorder(root);
 

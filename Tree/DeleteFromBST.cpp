@@ -118,11 +118,12 @@ Node * deleteFromBst(Node *root,int val){
     }
 
     if(root->data == val){
+        //0 child
         if(root->left == NULL and root->right == NULL){
             delete root;
             return NULL;
         }
-
+        //1Child
         if(root->left != NULL and root->right == NULL){
             Node* temp = root->left;
             delete root;
